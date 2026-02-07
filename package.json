@@ -1,7 +1,8 @@
+
 {
   "name": "neon-null-backend",
   "version": "1.0.0",
-  "description": "Backend API for Neon Null alpha tester signup and email delivery",
+  "description": "Backend API for neon null alpha tester signup and email delivery",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

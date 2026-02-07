@@ -237,7 +237,7 @@ app.post('/api/alpha-signup', async (req, res) => {
         const mailOptions = {
             from: `"Neon Null Team" <${process.env.EMAIL_USER}>`,
             to: email,
-            subject: '🚀 Welcome to Neon Null Alpha - Your Steam Key Inside!',
+            subject: '🚀 Welcome to Neon Null Alpha - Your Steam Key Is Inside!',
             html: generateWelcomeEmail(name, steamKey)
         };
         
