@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Neon Null - A Roguelike Journey Through the Cosmos</title>
-    <!-- Replace YOUR_RECAPTCHA_SITE_KEY with your actual reCAPTCHA v3 site key -->
-    <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render6LfA7F8sAAAAANK9XERYQCb9zJc4h8crXbnKsJOO"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -568,9 +567,16 @@
                     <label for="experience">GAMING EXPERIENCE (OPTIONAL)</label>
                     <textarea id="experience" name="experience" placeholder="Tell us about your experience with roguelikes or why you're excited to test..."></textarea>
                 </div>
+
                 
         
-                <button type="submit" class="btn btn-primary" style="width: 100%;">SIGN UP FOR ALPHA</button>
+                <button type="submit" class="btn btn-primary" id= "g-recaptcha-button"
+                style="width: 100%;"
+                    data-sitekey="6LfA7F8sAAAAANK9XERYQCb9zJc4h8crXbnKsJOO"
+                    data-callback='onSubmit'
+                    data-action='submit'>
+                >SIGN UP FOR ALPHA
+                </button>
                 
                 <div class="recaptcha-info">
                     This site is protected by reCAPTCHA and the Google
@@ -606,7 +612,7 @@
 
     <script>
         // reCAPTCHA Site Key - REPLACE WITH YOUR ACTUAL SITE KEY
-        const RECAPTCHA_SITE_KEY = 'YOUR_RECAPTCHA_SITE_KEY';
+        const RECAPTCHA_SITE_KEY = '6LfA7F8sAAAAANK9XERYQCb9zJc4h8crXbnKsJOO';
         
         // Generate stars
         function createStars() {

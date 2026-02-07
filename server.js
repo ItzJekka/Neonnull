@@ -1,4 +1,4 @@
-// server.js - Backend API for Celestial Chaos Alpha Signup
+// server.js - Backend API for Neon Null Alpha Signup
 // Install dependencies: npm install express nodemailer cors body-parser dotenv
 
 const express = require('express');
@@ -235,9 +235,9 @@ app.post('/api/alpha-signup', async (req, res) => {
         
         // Send welcome email
         const mailOptions = {
-            from: `"Celestial Chaos Team" <${process.env.EMAIL_USER}>`,
+            from: `"Neon Null Team" <${process.env.EMAIL_USER}>`,
             to: email,
-            subject: '🚀 Welcome to Celestial Chaos Alpha - Your Steam Key Inside!',
+            subject: '🚀 Welcome to Neon Null Alpha - Your Steam Key Inside!',
             html: generateWelcomeEmail(name, steamKey)
         };
         
@@ -279,5 +279,7 @@ app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
     console.log(`API endpoint: http://localhost:${PORT}/api/alpha-signup`);
 });
+
+
 
 module.exports = app;

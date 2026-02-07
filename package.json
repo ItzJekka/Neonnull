@@ -1,7 +1,7 @@
 {
-  "name": "celestial-chaos-backend",
+  "name": "neon-null-backend",
   "version": "1.0.0",
-  "description": "Backend API for Celestial Chaos alpha tester signup and email delivery",
+  "description": "Backend API for Neon Null alpha tester signup and email delivery",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,12 +9,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "celestial-chaos",
+    "neon-null",
     "alpha-signup",
     "email-api",
     "steam-keys"
   ],
-  "author": "Celestial Chaos Team",
+  "author": "Neon Null Team",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
