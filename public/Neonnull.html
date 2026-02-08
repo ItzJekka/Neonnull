@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Neon Null - A Roguelike Journey</title>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <div class="g-recaptcha" data-sitekey="6LfA7F8sAAAAANK9XERYQCb9zJc4h8crXbnKsJOO"></div>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfA7F8sAAAAANK9XERYQCb9zJc4h8crXbnKsJOO"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -572,12 +571,8 @@
 
                 
         
-                <button type="submit" class="btn btn-primary" id= "g-recaptcha-button"
-                style="width: 100%;"
-                    data-sitekey="6LfA7F8sAAAAANK9XERYQCb9zJc4h8crXbnKsJOO"
-                    data-callback='onSubmit'
-                    data-action='submit'>
-                >SIGN UP FOR ALPHA
+                <button type="submit" class="btn btn-primary" 
+                style="width: 100%;">SIGN UP FOR ALPHA
                 </button>
                 
                 <div class="recaptcha-info">
@@ -614,7 +609,10 @@
 
     <script>
         // reCAPTCHA Site Key - REPLACE WITH YOUR ACTUAL SITE KEY
-        const RECAPTCHA_SITE_KEY = '6LfA7F8sAAAAANK9XERYQCb9zJc4h8crXbnKsJOO';
+        <form action="?" method="POST">
+            <div class="g-recaptcha" data-sitekey="6LfA7F8sAAAAANK9XERYQCb9zJc4h8crXbnKsJOO"></div>
+            <br/>
+        </form>
         
         // Generate stars
         function createStars() {
