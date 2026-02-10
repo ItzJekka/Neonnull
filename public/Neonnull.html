@@ -225,10 +225,7 @@
             animation: pulse 2s infinite;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(0, 217, 255, 0.3); }
-            50% { transform: scale(1.05); box-shadow: 0 0 50px rgba(0, 217, 255, 0.6); }
-        }
+        
 
         /* Buttons */
         .cta-buttons {
@@ -254,11 +251,21 @@
             background: linear-gradient(135deg, var(--cosmic-purple), var(--nebula-pink));
             color: white;
             box-shadow: 0 10px 40px rgba(107, 76, 230, 0.4);
+            border-radius: 50px;
+            margin-bottom: 3rem;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(0, 217, 255, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 0 50px rgba(0, 217, 255, 0.6); }
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 60px rgba(107, 76, 230, 0.6);
+            animation: pulse 2s infinite ease-in-out;
         }
 
         .btn-secondary {
@@ -509,9 +516,9 @@
     <section class="hero">
         <h1>NEON NULL</h1>
         <p class="tagline">Driven By Speed, Pattern Recognition, and Controlled Chaos.</p>
-        <div class="release-date">LAUNCHING JULY 2026</div>
+        <div><a href="#steam" class="btn btn-primary">WISHLIST ON STEAM</a></div>
         <div class="cta-buttons">
-            <a href="#steam" class="btn btn-primary">WISHLIST ON STEAM</a>
+            <a href="#about" class="btn btn-secondary">LAUNCHING 2026</a>
             <a href="#alpha" class="btn btn-secondary">JOIN ALPHA TEST</a>
         </div>
     </section>
@@ -528,15 +535,15 @@
             <div class="features">
                 <div class="feature-card">
                     <h3>◆ PROCEDURAL CHAOS</h3>
-                    <p>Infinite galaxies with unique geometric patterns and enemy configurations every playthrough.</p>
+                    <p>Infinite galaxies filled with evolving geometric enemies making every run unpredictable</p>
                 </div>
                 <div class="feature-card">
                     <h3>■ SHAPE MASTERY</h3>
-                    <p>Battle and absorb the powers of squares, diamonds, and circles to evolve your abilities.</p>
+                    <p>Destroy and absorb hostile shapes to mutate your abilities and create personalized builds</p>
                 </div>
                 <div class="feature-card">
                     <h3>● COSMIC PROGRESSION</h3>
-                    <p>Permanent upgrades and unlockable ship modifications that persist between runs.</p>
+                    <p>Unlock upgrades and ship modifications that push each attempt further than the last..until the signal drops.</p>
                 </div>
             </div>
         </div>
@@ -591,8 +598,8 @@
         <h2>WISHLIST NOW</h2>
         <div class="about-content" style="text-align: center;">
             <p style="margin-bottom: 2rem;">
-                Add Neon Null to your Steam wishlist and be notified the moment we launch in July 2026. 
-                Your wishlist helps us tremendously and shows your support for indie game development!
+                Add Neon Null to your Steam wishlist and be notified the moment we launch in 2026. 
+                Your wishlist helps us tremendously and shows your support for game development!
             </p>
             <a href="https://store.steampowered.com/app/YOUR_STEAM_APP_ID" class="btn btn-primary" target="_blank">
                 WISHLIST ON STEAM
