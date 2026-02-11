@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Neon Null - A Roguelike Journey</title>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LeABGYsAAAAAHf98T8JvWdGmbzONWKUVkAUQtCx"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -281,6 +280,21 @@
             box-shadow: 0 15px 60px rgba(0, 217, 255, 0.4);
         }
 
+        .btn-triary {
+            background: linear-gradient(135deg, var(--nebula-pink), var(--cosmic-purple));
+            color: white;
+            box-shadow: 0 10px 40px rgba(255, 62, 157, 0.4);
+            text-align: center;
+            justify-self: center;
+            display: flex;
+            align-items: center;
+
+        }
+        .btn-triary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 60px rgba(255, 62, 157, 0.6);
+        }
+
         /* Sections */
         section {
             position: relative;
@@ -306,7 +320,7 @@
         }
 
         .about-content p {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             line-height: 1.8;
             color: var(--stardust);
             margin-bottom: 2rem;
@@ -358,93 +372,12 @@
             max-width: 700px;
             margin: 0 auto;
         }
-
-        .signup-form {
-            background: rgba(10, 10, 31, 0.6);
-            border: 2px solid var(--cosmic-purple);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-top: 3rem;
-            backdrop-filter: blur(10px);
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.9rem;
-            color: var(--plasma-cyan);
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            background: rgba(0, 217, 255, 0.05);
-            border: 2px solid rgba(0, 217, 255, 0.3);
-            border-radius: 10px;
-            color: var(--star-white);
-            font-family: 'Rajdhani', sans-serif;
+        .alpha-container p {
             font-size: 1.1rem;
-            transition: all 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--plasma-cyan);
-            box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
-            background: rgba(0, 217, 255, 0.1);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .recaptcha-info {
-            font-size: 0.85rem;
             color: var(--stardust);
             text-align: center;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(0, 217, 255, 0.2);
         }
 
-        .recaptcha-info a {
-            color: var(--plasma-cyan);
-            text-decoration: none;
-        }
-
-        .recaptcha-info a:hover {
-            text-decoration: underline;
-        }
-
-        .form-message {
-            margin-top: 1.5rem;
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 600;
-            display: none;
-        }
-
-        .form-message.success {
-            background: rgba(0, 217, 255, 0.1);
-            border: 2px solid var(--plasma-cyan);
-            color: var(--plasma-cyan);
-        }
-
-        .form-message.error {
-            background: rgba(255, 62, 157, 0.1);
-            border: 2px solid var(--nebula-pink);
-            color: var(--nebula-pink);
-        }
 
         /* Footer */
         footer {
@@ -553,43 +486,19 @@
     <section class="alpha-signup" id="alpha">
         <div class="alpha-container">
             <h2>JOIN THE ALPHA TEST</h2>
+            <br>
             <p>
                 Be among the first to experience Neon Null. Alpha testers get exclusive early access, 
                 direct communication with the dev team, and a Steam key delivered straight to your inbox.
             </p>
-            
-            <form class="signup-form" id="alphaForm">
-                <div class="form-group">
-                    <label for="name">NAME</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name">
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">EMAIL ADDRESS</label>
-                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                </div>
-                
-                <div class="form-group">
-                    <label for="experience">GAMING EXPERIENCE (OPTIONAL)</label>
-                    <textarea id="experience" name="experience" placeholder="Tell us about your experience with roguelikes or why you're excited to test..."></textarea>
-                </div>
-
-                
-        
-                <button type="submit" class="btn btn-primary" 
-                style="width: 100%;">SIGN UP FOR ALPHA
-                </button>
-                
-                <div class="recaptcha-info">
-                    This site is protected by reCAPTCHA and the Google
-                    <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
-                    <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
-                </div>
-
-                <div class="form-message" id="formMessage"></div>
-            </form>
-        </div>
+            <br><br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYXBhAII7nkDOVSA3mt23ojiOjktCbgy1lDg5RvUjPa0_kzQ/viewform" class="btn btn-triary" target="_blank">
+                SIGN UP FOR ALPHA
+            </a>
+            </div>
     </section>
+    
+                  
     
   
 
@@ -601,7 +510,7 @@
                 Add Neon Null to your Steam wishlist and be notified the moment we launch in 2026. 
                 Your wishlist helps us tremendously and shows your support for game development!
             </p>
-            <a href="https://store.steampowered.com/app/YOUR_STEAM_APP_ID" class="btn btn-primary" target="_blank">
+            <a href="https://store.steampowered.com/app/YOUR_STEAM_APP_ID" class="btn btn-secondary" target="_blank">
                 WISHLIST ON STEAM
             </a>
         </div>
@@ -614,7 +523,6 @@
 
     <script>
         
-    const RECAPTCHA_SITE_KEY = '6LeABGYsAAAAAHf98T8JvWdGmbzONWKUVkAUQtCx ';
         
         // Generate stars
         function createStars() {
@@ -654,62 +562,7 @@
         createStars();
         createShapes();
 
-       // Alpha Form Handler with reCAPTCHA v3
-        document.getElementById('alphaForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const formMessage = document.getElementById('formMessage');
-            const submitBtn = e.target.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.textContent;
-            
-            // Disable button and show loading
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'VERIFYING...';
-            formMessage.style.display = 'none';
-             
-            
-             try {
-                // Execute reCAPTCHA v3
-                const token = await grecaptcha.execute(RECAPTCHA_SITE_KEY, {action: 'alpha_signup'});
-                
-                submitBtn.textContent = 'SUBMITTING...';
-                
-                const formData = {
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    experience: document.getElementById('experience').value,
-                    recaptchaToken: token, // Include the reCAPTCHA token
-                    timestamp: new Date().toISOString()
-                };
-            
-                // Send to your backend API
-                const response = await fetch('http://localhost:3000/api/alpha-signup', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
-                const result = await response.json();
-                
-                if (response.ok && result.success) {
-                    formMessage.className = 'form-message success';
-                    formMessage.textContent = '✓ ' + result.message;
-                    formMessage.style.display = 'block';
-                    e.target.reset();
-                } else {
-                    throw new Error(result.message || 'Signup failed');
-                }
-            } catch (error) {
-                formMessage.className = 'form-message error';
-                formMessage.textContent = '✗ ' + (error.message || 'Something went wrong. Please try again or contact us directly.');
-                formMessage.style.display = 'block';
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalBtnText;
-            }
-        });
+       
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
