@@ -447,7 +447,7 @@
             <a href="#about">ABOUT</a>
             <a href="#alpha">ALPHA TEST</a>
             <a href="#steam">STEAM</a>
-            <a href="index.html">HOME</a>
+            <a href="/Home/">HOME</a>
         </nav>
     </header>
 
@@ -584,15 +584,6 @@
             });
         });
         
-app.use(express.static('public', { extensions: ['html'] }));
-
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/neonnull.html');
-});
-
-app.get('/neonnull', (req, res) => {
-    res.sendFile(__dirname + '/neonnull.html');
-});
     </script>
 </body>
 </html>
