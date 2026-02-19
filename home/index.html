@@ -100,12 +100,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            z-index: 10;
+            padding: 2rem 4rem;
+    
         }
         
         .logo-nav {
             display: flex;
             align-items: center;
             gap: 1rem;
+            
         }
         
         .logo-mark {
@@ -128,12 +133,14 @@
         
         .nav-links {
             display: flex;
+            flex-direction: row;
             gap: 2.5rem;
             align-items: center;
             list-style: none;
         }
         
         .nav-links a {
+            display: block;
             font-family: var(--font-display);
             font-size: 0.95rem;
             color: var(--color-cream);
@@ -161,6 +168,15 @@
         
         .nav-links a:hover::after {
             width: 100%;
+        }
+        @media (max-width: 600px) {
+        .nav-links {
+            flex-direction: column; /* Stacks links vertically */
+            width: 100%; /* Optional: Make the menu take full width */
+        }   
+        .nav-links li {
+        text-align: center; /* Optional: Center the text in the list items */
+        }
         }
         
         /* Dropdown */
@@ -548,6 +564,11 @@
             .games-grid {
                 grid-template-columns: 1fr;
             }
+            .social-links {
+                flex-direction: column;
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
@@ -561,7 +582,6 @@
                 <div class="brand-name">Warsong Studios</div>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
                 <li class="dropdown">
                     <span class="dropdown-toggle">
                         <a href="#games">Games</a>
@@ -601,7 +621,7 @@
                     <h3>Neon Null</h3>
                     <p>Designed to evolve, growing louder and more complex with every update. It represents our studio’s core vision: games that reward mastery and embrace risk. This is only our starting point.</p>
                 </div>
-                <a href="Neonnull.html" class="game-link">Learn More</a>
+                <a href="/home/Neonnull/" class="game-link">Learn More</a>
             </div>
         </div>
     </section>
@@ -618,13 +638,13 @@
     </section>
     
     <footer>
-        <section class="nav-links" id="socials">
-        <a href="https://www.instagram.com/studiowarsong?igsh=MWFlMmFybzF4cDAyYg%3D%3D&utm_source=qr" class="game-link" target="_blank">Instagram</a>
-        <a href="https://twitter.com/WarsongStudios" class="game-link" target="_blank">X</a>
-        <a href="https://discord.gg/warsongstudios" class="game-link" target="_blank">Discord</a>
-        <a href="https://bsky.app/profile/warsongstudios.bsky.social" class="game-link" target="_blank">Bluesky</a>
-        <a href="https://www.reddit.com/r/WarsongStudios/" class="game-link" target="_blank">Reddit</a>
-        <a href="https://www.tiktok.com/@studiowarsong?_r=1&_t=ZT-93b5ysfWfwE" class="game-link" target="_blank">TikTok</a>
+        <section class="social-links" id="socials">
+        <a href="https://www.instagram.com/studioswarsong/ " class="game-link" target="_blank">| Instagram |</a>
+        <a href="https://twitter.com/WarsongStudios" class="game-link" target="_blank">X |</a>
+        <a href="https://discord.gg/warsongstudios" class="game-link" target="_blank">Discord | </a>
+        <a href="https://bsky.app/profile/warsongstudios.bsky.social" class="game-link" target="_blank">Bluesky |</a>
+        <a href="https://www.reddit.com/r/WarsongStudios/" class="game-link" target="_blank">Reddit |</a>
+        <a href="https://www.tiktok.com/@studiowarsong?_r=1&_t=ZT-93b5ysfWfwE" class="game-link" target="_blank">TikTok |</a>
         </section>
         <div class="sword-divider"></div>
         <p>&copy; 2026 Warsong Studios. All rights reserved.</p>
