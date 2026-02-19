@@ -1,6 +1,7 @@
 FROM nginx:alpine
-COPY ./home /usr/share/nginx/html
-# Create nginx config that uses Railway's PORT
+
+COPY . /usr/share/nginx/html
+
 RUN echo 'server { \
     listen $PORT; \
     root /usr/share/nginx/html; \
