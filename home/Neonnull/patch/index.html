@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Patch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cosmic-purple: #6B4CE6;
+            --deep-space: #0a0a1f;
+            --nebula-pink: #FF3E9D;
+            --star-white: #E8F5FF;
+            --plasma-cyan: #00D9FF;
+            --void-black: #000000;
+            --stardust: #B8C5D6;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+        }
+        header {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5em;
+            color: var(--cosmic-purple);
+            margin: 0;
+        }
+        footer {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            color: #666666;
+        }
+        /* Animated galaxy background */
+        .galaxy-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(ellipse at top, #1a0f3d 0%, #0a0a1f 50%, #000000 100%);
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        /* Floating geometric shapes */
+        .shape-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .floating-shape {
+            position: absolute;
+            opacity: 0.15;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .square {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--cosmic-purple), var(--nebula-pink));
+            border: 2px solid var(--plasma-cyan);
+            box-shadow: 0 0 40px var(--cosmic-purple);
+        }
+
+        .diamond {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--plasma-cyan), var(--cosmic-purple));
+            transform: rotate(45deg);
+            border: 2px solid var(--nebula-pink);
+            box-shadow: 0 0 40px var(--plasma-cyan);
+        }
+        .circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--nebula-pink), var(--plasma-cyan));
+            border-radius: 50%;
+            border: 2px solid var(--cosmic-purple);
+            box-shadow: 0 0 40px var(--nebula-pink);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(50px, 50px) rotate(90deg); }
+            50% { transform: translate(0, 100px) rotate(180deg); }
+            75% { transform: translate(-50px, 50px) rotate(270deg); }
+        }
+        /* Header */
+        header {
+            position: relative;
+            z-index: 10;
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(10, 10, 31, 0.9), transparent);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 4px;    
+            text-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+            animation: pulse-glow 3s infinite;
+            background: linear-gradient(135deg, var(--cosmic-purple), var(--plasma-cyan));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;  
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+
+        nav a {
+            color: var(--star-white);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--plasma-cyan), var(--nebula-pink));
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+        nav a:hover {
+            color: var(--plasma-cyan);
+        }
+        /* Main content */
+        main {
+            position: relative;
+            z-index: 10;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 0 0 60px rgba(255, 62, 157, 0.5);
+        }
+        .points {
+            color: var(--nebula-pink);
+            font-weight: 600;
+            font-family: "Orbitron", sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }     
+
+        main h2 {
+            font-size: 2.5rem;
+            color: var(--stardust);
+            margin-bottom: 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 40px rgba(255, 62, 157, 0.7);
+        }
+        main p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: var(--star-white);
+            
+        }
+        /* Buttons */
+        .btn {
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 2px;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap; 
+            min-width: fit-content; 
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--cosmic-purple), var(--nebula-pink));
+            color: white;
+            box-shadow: 0 10px 40px rgba(107, 76, 230, 0.4);
+            border-radius: 50px;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite ease-in-out;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
+
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(0, 217, 255, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 0 50px rgba(0, 217, 255, 0.6); }
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 60px rgba(107, 76, 230, 0.6);
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 5;
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(to top, rgba(10, 10, 31, 0.9), transparent);
+            color: var(--stardust);
+        }
+    </style>
+</head>
+<body>
+    <div class="galaxy-bg"></div>
+    <div class="stars">
+        <!-- Generate stars dynamically with JavaScript -->
+    </div>
+    <div class="shape-container">
+        <div class="floating-shape square" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-shape diamond" style="top: 40%; left: 80%; animation-delay: 5s;"></div>
+        <div class="floating-shape circle" style="top: 70%; left: 30%; animation-delay: 10s;"></div>
+    </div>
+    <header>
+        <div class="logo">NEON NULL</div>
+        <nav>
+            <a href="/home/Neonnull/">Home</a>
+            
+
+        </nav>
+    </header>
+    <main id="patch-notes">
+        <h2 class="main-h2">Patch Notes Pre-Alpha V0.29 </h2>
+        <p class="main-p">Welcome to the latest patch notes for Neon Null! In this update, we've made significant improvements to the game's performance and stability, as well as added new features and content. Here's a breakdown of what's new:</p>
+        <ul>
+            <li class="points"><strong>New:</strong></li>
+            <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
+                <li>The cosmic clouds in the background now pulse red when you get hit (can be disabled in settings).</li>
+                <li>A very subtle vignette border now pulses on the edges of the screen when you get hit.</li>
+                <li>^--- both of these can be disabled in settings.</li>
+                <li>Added a sound that plays when a projectile hits the player (if it deals knockback, it plays ship collision sound -- if there is no knockback, it plays this sound).,</li>
+                <li>Drone companion has a new model that now matches with the player's ship color. Also has a new shooting sound. More changes coming to this tonight.</li>
+                </ul>
+            <li class="points"><strong>Changes:</strong></li>
+            <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
+                <li>Increased hitbox size of P2 and P3 phase of 4th boss.</li>
+                <li>Overhauled the visuals for multiple mechanics in the 4th boss.</li>
+                <li>Smoothed out P2 -> P2.5 transition for 4th boss.</li>
+                <li>The dual charge beam in P1 no longer deals damage to the player for 4th boss.</li>
+                <li>The shooting stars in the 4th boss fight now do damage to the player.</li>
+                <li>Removed knockback from beginning of 4th boss fight.</li>
+            </ul>
+            <li class="points"><strong>Fixes:</strong></li>
+            <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
+                <li>Fixed cosmic trail not working on moon spirits in P1 of 4th boss.</li>
+                <li>Fixed plasma beam not working on umbra clone in P3 of 4th boss.</li>
+                <li>Fixed a bug where the bosses were still targetable after P1 of 4th boss ended.</li>
+                <li>Fixed decoy beacon not working on or doing damage to the spirits in P1 of 4th boss.</li>
+                <li>Fixed P1 spirits not knocking back the player when dealing damage.</li>
+                <li>Fixed an issue with the start of the 4th boss fight that caused the orbiting transition to be a little funky.</li>
+                <li>Fixed a bug with the execute upgrade showing 0% -> 0% (should be 0% -> 0.3%)</li>
+            </ul>
+        </ul>
+        <p class="main-p">Thank you for playing Neon Null! We hope you enjoy the new content and improvements. As always, we welcome your feedback and suggestions for future updates.</p>
+        <br>
+        <a href ="https://gforms.app/qT3FxCd" class="btn-primary">Bug Report</a>
+    </main>
+    <footer>
+        <p>&copy; 2026 Warsong Studios. All rights reserved.</p>
+    </footer>
+    <script>
+        // Generate random stars
+        const starsContainer = document.querySelector('.stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.width = `${Math.random() * 2 + 1}px`;
+            star.style.height = star.style.width;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            starsContainer.appendChild(star);
+        }
+
+
+        // Initialize
+        createStars();
+
+       
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
