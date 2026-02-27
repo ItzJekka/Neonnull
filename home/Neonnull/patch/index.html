@@ -273,35 +273,51 @@
         </nav>
     </header>
     <main id="patch-notes">
-        <h2 class="main-h2">Patch Notes Pre-Alpha V0.29 </h2>
+        <h2 class="main-h2">Patch Notes Pre-Alpha V0.30 </h2>
         <p class="main-p">Welcome to the latest patch notes for Neon Null! In this update, we've made significant improvements to the game's performance and stability, as well as added new features and content. Here's a breakdown of what's new:</p>
         <ul>
             <li class="points"><strong>New:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>The cosmic clouds in the background now pulse red when you get hit (can be disabled in settings).</li>
-                <li>A very subtle vignette border now pulses on the edges of the screen when you get hit.</li>
-                <li>^--- both of these can be disabled in settings.</li>
-                <li>Added a sound that plays when a projectile hits the player (if it deals knockback, it plays ship collision sound -- if there is no knockback, it plays this sound).,</li>
-                <li>Drone companion has a new model that now matches with the player's ship color. Also has a new shooting sound. More changes coming to this tonight.</li>
+                <li>Added a new upgrade type -- Cosmic+</li>
+                <li>Added a new Cosmic+ upgrade - Artillery Protocol</li>
+                <li>Added a new Cosmic+ upgrade - Maintenance Module</li>
+                <li>Added a very early first testing point of our new ship AI companion. The voice line is a placeholder and so is the presentation, a more complete implementation will be available in tomorrow's patch (the 27th).</li>
+                <li>Added a new base model for the ship (no longer a placeholder).</li>
+                <li>Added the ship's visual preview to the hangar.</li>
+                <li>Added multiple new, ship altering designs that are influenced by which drive the player has equipped. Changes the thrusters and the lights on the ship.</li>
+                <li>Added a color picker to the 'color' tab that allows the player to choose which color they want for their hull / ship lights, as well as their boost.</li>
+                <li>Completely overhauled the boosting visual effects of all the ships. I'm still touching this up a LOT, tomorrow it will look a lot better than it does even now. Bare with me on this one please </li>
+                <li>Added the same 3D bevel we use for enemies to the hull shapes to give them a little bit of definition.</li>
+                <li>Added rumble support for controllers. NOTE: Context Buttons will be added for controllers tomorrow, I did add some of it today but not everything that is planned.</li>
                 </ul>
             <li class="points"><strong>Changes:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>Increased hitbox size of P2 and P3 phase of 4th boss.</li>
-                <li>Overhauled the visuals for multiple mechanics in the 4th boss.</li>
-                <li>Smoothed out P2 -> P2.5 transition for 4th boss.</li>
-                <li>The dual charge beam in P1 no longer deals damage to the player for 4th boss.</li>
-                <li>The shooting stars in the 4th boss fight now do damage to the player.</li>
-                <li>Removed knockback from beginning of 4th boss fight.</li>
+                <li>Added new sounds to the drone companion and tweaked all of their volume based on distance to be smoother than they were previously.</li>
+                <li>The drone AND the micro-missiles for the drone will now target any enemy you have locked on. I'll end up expanding on this behavior and its controllability in a later patch.</li>
+                <li>Added uncommon, common, rare and epic versions of the thruster upgrade. Lowered the % that they give to balance.</li>
+                <li>Added uncommon and common variants of plasma beam damage.</li>
+                <li>Hulls no longer rotate in the ship's viewport (will probably come back later).</li>
+                <li>Removed the turret from the tip of the ship (this will come back in a different form later).</li>
+                <li>Adjusted the balancing of the drives to give them their own individual profiles, while still making sure more expensive drives perform better.</li>
+                <li>Mark II drive has been replaced with Ghost I drive. Drives will be upgradeable using bits in the very near future.</li>
+                <li>Overhauled the prestige bar to look significantly better than it did previously.</li>
+                <li>Increased the size of the hexagon sprite by approximately 50%, and increased its overall barrier size by 25%.</li>
+                <li>Wormhole event can no longer happen when the player is in the middle of a challenge.</li>
+                <li>Adjusted controller layout to be more user friendly. Mappable controls are coming in an update in early March, so hang in there.</li>
+                <li>Added a 0.5s delay between using decoy beacon and going invulnerable / stealth. Taking damage cancels it without using the charge.</li>
+                <li>Adjusted the glow around the UI elements when playing on controller to be way less obnoxious.</li>
+                <li>Adjusted the projectiles of the blue shooter triangles.</li>
             </ul>
             <li class="points"><strong>Fixes:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>Fixed cosmic trail not working on moon spirits in P1 of 4th boss.</li>
-                <li>Fixed plasma beam not working on umbra clone in P3 of 4th boss.</li>
-                <li>Fixed a bug where the bosses were still targetable after P1 of 4th boss ended.</li>
-                <li>Fixed decoy beacon not working on or doing damage to the spirits in P1 of 4th boss.</li>
-                <li>Fixed P1 spirits not knocking back the player when dealing damage.</li>
-                <li>Fixed an issue with the start of the 4th boss fight that caused the orbiting transition to be a little funky.</li>
-                <li>Fixed a bug with the execute upgrade showing 0% -> 0% (should be 0% -> 0.3%)</li>
+                <li>Fixed a bug with the thruster upgrade that was causing it to not give the player any actual increase.</li>
+                <li>Fixed a bug where graviton pellets could show up in the list of choices from a cosmic gem when the player didn't already have Singularity Sledge.</li>
+                <li>Fixed a bug where Firmware Update could show up if you weren't wearing that neural module (even though there isn't a second one yet).</li>
+                <li>Fixed a bug where Entropy Harvester could show up as an option from the cosmic gem selection AND upgrade menu even if you didn't have a DoT source yet.</li>
+                <li>Fixed plasma beam damage increase not working. Also changed the stat preview and description text to show in damage numbers instead of percentage.</li>
+                <li>Fixed an unintentional mechanic that was causing the tether from the star clone to do damage to the player every 0.5s.</li>
+                <li>Fixed a bug with vampiric rounds that was causing them to not trigger.</li>
+                <li>Controller support is fully updated (there were a bunch of things missing from it since I haven't touched it in awhile).</li>
             </ul>
         </ul>
         <p class="main-p">Thank you for playing Neon Null! We hope you enjoy the new content and improvements. As always, we welcome your feedback and suggestions for future updates.</p>
