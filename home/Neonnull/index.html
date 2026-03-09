@@ -394,6 +394,33 @@
             background: linear-gradient(to top, rgba(10, 10, 31, 0.9), transparent);
             color: var(--stardust);
         }
+        
+        
+        .footer-nav a {
+            color: var(--star-white);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            transition: color 0.3s;
+            background: linear-gradient(135deg, var(--plasma-cyan), var(--nebula-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+            animation: pulse-glow 3s infinite;
+        }
+        .footer-nav{
+            padding: 1rem;
+        }
+
+        
+
+        .footer-nav a:hover::after {
+            width: 100%;
+        }
+        
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -416,7 +443,7 @@
                 padding: 2rem;
             }
 
-            nav a {
+            .nav-a {
                 margin: 0.5rem;
             }
 
@@ -521,6 +548,7 @@
 
     <!-- Steam Section -->
     <section class="about" id="steam">
+            
         <h2>-WISHLIST NOW-</h2>
         <div class="about-content" style="text-align: center;">
             <p style="margin-bottom: 2rem;">
@@ -535,6 +563,12 @@
 
     <!-- Footer -->
     <footer>
+        <!--<section class="footer-nav">
+            <a href="https://www.facebook.com/profile.php?id=61587292686590&mibextid=wwXIfr&mibextid=wwXIfr ">FACEBOOK</a>
+            <a href="https://www.reddit.com/r/NeonNull/ ">REDDIT</a>
+            <a href="#steam">TIKTOK</a>
+            <a href="#home">X</a>
+        </section>-->
         <p>&copy; 2026 Warsong Studios. All rights reserved. | Developed with ❤️ for roguelike enthusiasts</p>
     </footer>
 
