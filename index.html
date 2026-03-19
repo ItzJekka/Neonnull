@@ -501,6 +501,24 @@
             gap: 1rem;
             color: var(--color-gold);
         }
+
+        .game-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .game-card-link:hover {
+            transform: translateY(-10px);
+        }   
+
+        /* Remove the nested link or handle it differently */
+        .game-card .game-link {
+            position: relative;
+            z-index: 10;
+            pointer-events: auto;
+        }
     
         
         /* Footer */
@@ -609,11 +627,12 @@
         <div class="featured-container">
             <h2>Our Games</h2>
             <div class="games-grid">
-                <div class="game-card" id="game1">
-                    <h3>Neon Null</h3>
-                    <p>Designed to evolve, growing louder and more complex with every update. It represents our studio’s core vision: games that reward mastery and embrace risk. This is only our starting point.</p>
-                </div>
-                <a href="/home/Neonnull/" class="game-link">Learn More</a>
+                <a href="/home/Neonnull/" class="game-card-link">
+                    <div class="game-card" id="game1">
+                        <h3>Neon Null</h3>
+                        <p>Designed to evolve, growing louder and more complex with every update. It represents our studio’s core vision: games that reward mastery and embrace risk. This is only our starting point.</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
