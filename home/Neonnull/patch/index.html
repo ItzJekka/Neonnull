@@ -273,52 +273,60 @@
         </nav>
     </header>
     <main id="patch-notes">
-        <h2 class="main-h2">Patch Notes Pre-Alpha V0.32</h2>
-        <h3 class="main-h2">Release Date: March 24, 2026</h3>
+        <h2 class="main-h2">Patch Notes Pre-Alpha V0.32.1</h2>
+        <h3 class="main-h2">Release Date: March 29, 2026</h3>
         <p class="main-p">Welcome to the latest patch notes for Neon Null! In this update, we've made significant improvements to the game's performance and stability, as well as added new features and content. Here's a breakdown of what's new:</p>
         <ul>
             <li class="points"><strong>New:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>Added the Data Matrix. You can spend data that you accumulate in-game to roll for randomized upgrades, then place them in your data matrix to apply them to your runs.</li>
-                <li>Added the cosmic titan, a new recurring event that occurs at least once every playthrough depending on how far you get. This is still VERY much in the works.</li>
-                <li>Added a new, additional first boss. There will be a 50% chance to get this boss OR the pentagon at level 10.</li>
-                <li>Added a new enemy to the mix, the cross.</li>
-                <li>Revamped the standard triangle enemy's overall logic. This enemy didn't really work well, and given that it was one of the most common enemies, that was a huge issue that I've wanted to tackle. More tweaks to come to this.</li>
-                <li>I very drastically increased prediction logic. It is MUCH better now, like, it is now at almost flawless accuracy.</li>
-                <li>Added names and title text above the health bar for all bosses.</li>
-                <li>Added a new cosmic+ upgrade, 'Sanguine Overflow'.</li>
+                <li>Added a new tech upgrade, 'Recursive Payload'.</li>
+                <li>Added a new cosmic+ upgrade, 'Gravity Well'.</li>
+                <li>Added a new cosmic+ upgrade, 'Volatile Cells'.</li>
+                <li>Added a new tech upgrade, 'Reactor Breach'.</li>
+                <li>Added a new tech upgrade, 'Adaptive Focus'.</li>
+                <li>Added common, uncommon, rare and epic rarities of an upgrade that reduces rocket recharge time.</li>
+                <li>Added the elite rhombus to the enemy pool.</li>
+                <!--<li>Added a new cosmic+ upgrade, 'Sanguine Overflow'.</li>
                 <li>Added a new tech upgrade, 'Thermal Exhaust'.</li>
                 <li>Added a new tech upgrade, 'Surge Collector'.</li>
-                <li>Added two new songs to the soundtrack.</li>
+                <li>Added two new songs to the soundtrack.</li>-->
                 </ul>
             <li class="points"><strong>Changes:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>Did a pass on the prestige progress panel to make it nicer / less flat looking. Still far from finished.</li>
-                <li>Added upgrade rarity as a stat in the hangar menu.</li>
-                <li>Added regular, elite, and boss damage as a stat in the hangar menu.</li>
-                <li>Added two decimal places to the stats panel, since it is needed now.</li>
-                <li>Overhauled the rocket impact's visual FX.</li>
-                <li>Buffed 'Vampiric Rounds' from 0.10% to 0.35%.</li>
-                <li>Improved environmental lighting.</li>
-                <li>Increased the healing amount received from corrupted boss mechanics (mechanics that are green) from 1 to 2.</li>
-                <li>Increased the healing frequency of the corrupted beam on the circle boss.</li>
-                <li>Slowed down the rate at which cosmic vacuum pulls gems, to make it a little more satisfying.</li>
-                <li>Increased the recharge time of Decoy Beacon slightly (was still way too strong / powerful / easy to use).</li>
-                <li>Gave an initial pass to the game over screen.</li>
-                <li>Decreased the size of the status cluster bar at the top left slightly, and repositioned it slightly.</li>
-                <!--<li>Adjusted the glow around the UI elements when playing on controller to be way less obnoxious.</li>
-                <li>Adjusted the projectiles of the blue shooter triangles.</li>-->
+                <li>Added a new enemy death effect, much more fitting and colorful than the original.</li>
+                <li>Added sound, visual and status effects to the cross mine from the new cross enemy.</li>
+                <li>Added tech and cosmic+ upgrades to the titan shop.</li>
+                <li>Adjusted projectile damage on the square boss.</li>
+                <li>Slightly adjusted the size of the projectiles on the square boss.</li>
+                <li>Overhauled the neon border for elite enemies.</li>
+                <li>Touched up the crosshair to give it a cleaner look and also make it consistently sized across all resolutions. Also decreased its size slightly.</li>
+                <li>Split shot angle is now tighter for better performance on bosses. Makes it less of a detrimental pick and more of a useful one.</li>
+                <li>Slightly increased the average gap size in the neon barrier mechanic.</li>
+                <li>Added some additional FX to the titan's wormhole intro / outro sequence.</li>
+                <li>Slightly increased the visual queues for the titan's wormhole event.</li>
+                <li>Removed chromatic aberration visual FX, should result in certain visuals looking less blurry.</li>
+                <li>Adjusted the 2.5D bevel effect to get rid of the bevel dot in the center of most shapes. Future changes coming to remove it from any shapes that still show it.</li>
+                <li>Added bullet prediction to the combat drone.</li>
+                <li>Slightly lowered the rate at which players collect Encrypted Data.</li>
             </ul>
             <li class="points"><strong>Fixes:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>Fixed a number of scaling issues in the hangar panel for users on ultra wide monitors.</li>
-                <li>Fixed plasma surge protocol not working, since boosting was disabled by default it didn't actually work or do anything. Now, if you have Plasma Surge Protocol, you are allowed to boost while using plasma beam & it gives the bonus it was intended to give.</li>
-                <!--<li>Fixed a bug where Firmware Update could show up if you weren't wearing that neural module (even though there isn't a second one yet).</li>
-                <li>Fixed a bug where Entropy Harvester could show up as an option from the cosmic gem selection AND upgrade menu even if you didn't have a DoT source yet.</li>
-                <li>Fixed plasma beam damage increase not working. Also changed the stat preview and description text to show in damage numbers instead of percentage.</li>
-                <li>Fixed an unintentional mechanic that was causing the tether from the star clone to do damage to the player every 0.5s.</li>
-                <li>Fixed a bug with vampiric rounds that was causing them to not trigger.</li>
-                <li>Controller support is fully updated (there were a bunch of things missing from it since I haven't touched it in awhile).</li>-->
+                <li>Vastly adjusted the hitbox of each ship model.</li>
+                <li>Fixed title issues and badge issues on some bosses.</li>
+                <li>Fixed a number of scaling issues on ultrawide monitors.</li>
+                <li>Fixed hitbox issues on the square bosses projectiles.</li>
+                <li>Fixed combat drone not doing damage to the square boss and its turrets.</li>
+                <li>Fixed a bug with the titan's voice spawning voice line.</li>
+                <li>Fixed the titan's eyes being derpy.</li>
+                <li>Fixed the titan's tethers being on top of the shapes comprising it instead of behind them as intended.</li>
+                <li>Fixed a bug where certain bosses would spawn in the same frame as the upgrade menu, causing them to show up in the background. They now initialize AFTER the upgrade.</li>
+                <li>Fixed a bug where the titan event would start in the same frame as the upgrade menu, causing it to be a little buggy. It now initializes AFTER the upgrade.</li>
+                <li>Fixed a bug where projectiles would destroy cross mines.</li>
+                <li>Fixed an issue with one of the menu settings overlapping in the controller section.</li>
+                <li>Balanced a number of sounds that were too loud.</li>
+                <li>Fixed a bug where the player would shift locations while traveling through the titan's wormhole.</li>
+                <li>Fixed a bug where asteroids could hit the player while in stealth (decoy beacon).</li>
+                <li>Fixed several other smaller, insignificant bugs.</li>
             </ul>
         </ul>
         <p class="main-p">Thank you for playing Neon Null! We hope you enjoy the new content and improvements. As always, we welcome your feedback and suggestions for future updates.</p>
