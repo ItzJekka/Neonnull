@@ -273,19 +273,19 @@
         </nav>
     </header>
     <main id="patch-notes">
-        <h2 class="main-h2">Patch Notes Pre-Alpha V0.36</h2>
-        <h3 class="main-h2">Release Date: April 21, 2026</h3>
+        <h2 class="main-h2">Patch Notes Pre-Alpha V0.37</h2>
+        <h3 class="main-h2">Release Date: April 23, 2026</h3>
         <p class="main-p">Welcome to the latest patch notes for Neon Null! In this update, we've made significant improvements to the game's performance and stability, as well as added new features and content. Here's a breakdown of what's new:</p>
         <ul>
             <li class="points"><strong>New:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>Added a new offensive module, the Neon Railgun.</li>
-                <li>Added a new cosmic blessing, Rail Loop.</li>
+                <li>Added a new upgrade that increases the chance to find a cosmic gem.</li>
+                <!--<li>Added a new cosmic blessing, Rail Loop.</li>
                 <li>Added a new cosmic+ upgrade, Secure Loop.</li>
                 <li>Added a new tech upgrade, Charging Imperative.</li>
                 <li>Added a new tech upgrade, Overdrive Capacitors.</li>
                 <li>Added a new 'System Health' mechanic. Now, instead of bosses spawning at specific levels, they will spawn once the system health drops to 0. This is a standard timer with a bit of a twist, and it allows for good performance to be rewarded by being able to go in to a boss at a higher level than normal. This will get expanded on as time goes on.</li>
-                <!--<li>Added the elite rhombus to the enemy pool.</li>
+                <li>Added the elite rhombus to the enemy pool.</li>
                 <li>Added a new cosmic+ upgrade, 'Sanguine Overflow'.</li>
                 <li>Added a new tech upgrade, 'Thermal Exhaust'.</li>
                 <li>Added a new tech upgrade, 'Surge Collector'.</li>
@@ -293,33 +293,33 @@
                 </ul>
             <li class="points"><strong>Changes:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>Added a little bit of animation to the HP and EXP bars in the cluster upgrade.</li>
-                <li>Adjusted avoidance logic amongst a handful of enemy types.</li>
-                <li>Removed lancing module blessing and made it a default part of Neon Lance by default.</li>
-                <li>Slightly adjusted base regeneration rate and regeneration delay time for boosting, making it regenerate approximately 10-15% faster.</li>
-                <li>Many small volume tweaks in areas where they were a little too loud.</li>
-                <li>Major skill tree visual pass (removed panel from right side, added hoverable tooltip, many other general improvements).</li>
-                <li>Moderate settings menu visual pass. Many changes, tweaks, etc.</li>
-                <li>Added new sprites for the three different CPUs (placeholders, but more pleasant to look at).</li>
-                <li>Added new sprites for the three different drives (placeholders, but more pleasant to look at).</li>
-                <li>Moderate 'game over' screen overhaul.</li>
-                <li>Adjusted boss spawn logic so their intro animation plays immediately instead of there being a weird delay.</li>
-                <!--<li>Removed chromatic aberration visual FX, should result in certain visuals looking less blurry.</li>
-                <li>Buffed Singularity Anchor damage by approximately 10%.</li>
-                <li>Removed the ammo charge penalty from taking damage while charging neon lance.</li>
+                <li>Ammo for offensive and utility modules now recharges after a boss fight or a completed challenge.</li>
+                <li>Adjusted pacer triangle teleportation logic and visual effects.</li>
+                <li>Adjusted circle swarm logic, they were not supposed to be wired to be aggressive when followers were present and that has now been fixed.</li>
+                <li>Added an animation transition to circle swarm leaders' throw ability.</li>
+                <li>Lowered the spawn rate of circle swarms.</li>
+                <li>Major enemy spawning formula adjustments.</li>
+                <li>Major adjustments to cosmic pulse. It no longer pulses every 15 seconds, instead it is now a usable ability like phase shift (double tap boost).</li>
+                <li>Removed the phase shift hud icon on the cursor, it now uses the same indicator as cosmic pulse (ring inside ship).</li>
+                <li>Adjusted the rogue signal enemy's zone ability.</li>
+                <li>Renamed 'Upgrade Rarity' to 'Rarity Boost' and correctly adjusted its numbers to reflect what it actually provides in terms of boosting rarity.</li>
+                <li>The 'Scarred Dogtags' memento is now selected by default for new players.</li>
+                <li>Increased delay of rogue signal's teleport attack slightly.</li>
+                <li>Increased floating combat text size across the board by 15%.</li>
+                <!--<li>Removed the ammo charge penalty from taking damage while charging neon lance.</li>
                 <li>Slightly decreased the health of regular (non-elite) rectangles.</li>-->
             </ul>
             <li class="points"><strong>Fixes:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>Fixed an inconsistency with the thrusters upgrade causing common to give more than uncommon.</li>
-                <li>Fixed a bug that caused players to get two upgrades when materializing on controller.</li>
-                <li>Fixed a bug with rarity colors in the upgrade menu not matching the card itself on controller.</li>
-                <li>Fixed a bug where boss damage was projectile damage instead of collision damage (and provided no knockback).</li>
-                <!--<li>Fixed a bug that was causing boss badges to reappear on the next boss fight in certain scenarios.</li>
-                <li>Fixed missing chrono stutter references causing certain enemies during certain instances to not be effected.</li>
-                <li>Many rhombus boss fight tweaks, fixes and changes.</li>
-                <li>Fixed a few small things with the golden pacer triangles.</li>
-                <li>Fixed a bug where the background lightning for the dragon boss would show up in the upgrade menu before the boss spawned.</li>
+                <li>Fixed a bug where players could phase shift or decoy beacon stealth through ciradion the endless' walls.</li>
+                <li>Fixed a bug where the phase shift HUD element was enabled even when the player didn't have the upgrade.</li>
+                <li>Fixed MANY edge cases where neon rain did not properly effect certain boss damage or player damage.</li>
+                <li>Updated singularity sledge's description to more accurately reflect what it is.</li>
+                <li>Updated cosmic pulse's description to more accurately reflect what it is.</li>
+                <li>Fixed a bug where rogue signal's zone visual effects would not disappear sometimes after dying.</li>
+                <li>Fixed a bug where homing rockets would sometimes not find a target or even attempt to home.</li>
+                <li>Various hangar tweaks.</li>
+                <!--<li>Fixed a bug where the background lightning for the dragon boss would show up in the upgrade menu before the boss spawned.</li>
                 <li>Fixed several bugs with Vampiric Rounds blessing.</li>
                 <li>Fixed some issues with the upgrade menu, should be much cleaner now.</li>
                 <li>Fixed a bug where the Recursive Payload upgrade did not sync with the bombard and trident protocol upgrades.</li>
