@@ -273,15 +273,15 @@
         </nav>
     </header>
     <main id="patch-notes">
-        <h2 class="main-h2">Patch Notes Pre-Alpha V0.37</h2>
-        <h3 class="main-h2">Release Date: April 23, 2026</h3>
+        <h2 class="main-h2">Patch Notes Pre-Alpha V0.38</h2>
+        <h3 class="main-h2">Release Date: April 26, 2026</h3>
         <p class="main-p">Welcome to the latest patch notes for Neon Null! In this update, we've made significant improvements to the game's performance and stability, as well as added new features and content. Here's a breakdown of what's new:</p>
         <ul>
             <li class="points"><strong>New:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>Added a new upgrade that increases the chance to find a cosmic gem.</li>
-                <!--<li>Added a new cosmic blessing, Rail Loop.</li>
-                <li>Added a new cosmic+ upgrade, Secure Loop.</li>
+                <li>Added various bonus effects to each skill constellation when filled out completely.</li>
+                <li>Added a new cosmic+ upgrade -- 'Cosmic Wake'.</li>
+                <!--<li>Added a new cosmic+ upgrade, Secure Loop.</li>
                 <li>Added a new tech upgrade, Charging Imperative.</li>
                 <li>Added a new tech upgrade, Overdrive Capacitors.</li>
                 <li>Added a new 'System Health' mechanic. Now, instead of bosses spawning at specific levels, they will spawn once the system health drops to 0. This is a standard timer with a bit of a twist, and it allows for good performance to be rewarded by being able to go in to a boss at a higher level than normal. This will get expanded on as time goes on.</li>
@@ -293,35 +293,47 @@
                 </ul>
             <li class="points"><strong>Changes:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>Ammo for offensive and utility modules now recharges after a boss fight or a completed challenge.</li>
-                <li>Adjusted pacer triangle teleportation logic and visual effects.</li>
-                <li>Adjusted circle swarm logic, they were not supposed to be wired to be aggressive when followers were present and that has now been fixed.</li>
-                <li>Added an animation transition to circle swarm leaders' throw ability.</li>
-                <li>Lowered the spawn rate of circle swarms.</li>
-                <li>Major enemy spawning formula adjustments.</li>
-                <li>Major adjustments to cosmic pulse. It no longer pulses every 15 seconds, instead it is now a usable ability like phase shift (double tap boost).</li>
-                <li>Removed the phase shift hud icon on the cursor, it now uses the same indicator as cosmic pulse (ring inside ship).</li>
-                <li>Adjusted the rogue signal enemy's zone ability.</li>
-                <li>Renamed 'Upgrade Rarity' to 'Rarity Boost' and correctly adjusted its numbers to reflect what it actually provides in terms of boosting rarity.</li>
-                <li>The 'Scarred Dogtags' memento is now selected by default for new players.</li>
-                <li>Increased delay of rogue signal's teleport attack slightly.</li>
-                <li>Increased floating combat text size across the board by 15%.</li>
-                <!--<li>Removed the ammo charge penalty from taking damage while charging neon lance.</li>
-                <li>Slightly decreased the health of regular (non-elite) rectangles.</li>-->
+                <li>Slightly lowered the spawn rate on the turrets in Citadel Null.</li>
+                <li>Slightly lowered the health on the turrets in Citadel Null.</li>
+                <li>Slightly increased the time between shots on the turrets in Citadel Null.</li>
+                <li>Slightly increased the damage done by eliminating turrets in Citadel Null.</li>
+                <li>Increased the size of the skill tree tooltips by 25%.</li>
+                <li>Polished the pacer triangle's teleport visual effects.</li>
+                <li>Drastically increased diver bomb's avoidance logic to hopefully stop them from plowing through enemies while diving.</li>
+                <li>Removed the rarity color overlay on mementos.</li>
+                <li>Buffed Overclocked CPU to match the price.</li>
+                <li>Many data matrix menu improvements.</li>
+                <li>Many hangar menu improvements.</li>
+                <li>Many game over screen improvements.</li>
+                <li>Many skill tree improvements.</li>
+                <li>Many skill tree node value adjustments.</li>
+                <li>Prestige bar overhaul.</li>
+                <li>MANY font adjustments.</li>
+                <li>Lowered speed of the mini circle swarm followers when they are running to a leader.</li>
+                <li>Cosmic Vacuum optimization.</li>
+                <li>Added a pickup sound for cosmic gems.</li>
+                <li>Removed the telegraph arrows from rectangles and elite rectangles as they were tacky and unnecessary.</li>
+                <li>Increased the lifetime of the circle follower's throw.</li>
+                <li>Increased the size of floating health numbers by 15%.</li>
+                <li>Added health pickup sound when healed by boss mechanics.</li>
+                <li>Changed the cross enemy to between an icy white / very light blue color.</li>
+                <li>Adjusted the size of the text in the pause menu.</li>
+                <li>Lowered bullet volume just a hair.</li>
+                <li>Adjusted act intervals to be not as long.</li>
             </ul>
             <li class="points"><strong>Fixes:</strong></li>
             <ul style="margin-bottom: 1.2rem; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;">
-                <li>Fixed a bug where players could phase shift or decoy beacon stealth through ciradion the endless' walls.</li>
-                <li>Fixed a bug where the phase shift HUD element was enabled even when the player didn't have the upgrade.</li>
-                <li>Fixed MANY edge cases where neon rain did not properly effect certain boss damage or player damage.</li>
-                <li>Updated singularity sledge's description to more accurately reflect what it is.</li>
-                <li>Updated cosmic pulse's description to more accurately reflect what it is.</li>
-                <li>Fixed a bug where rogue signal's zone visual effects would not disappear sometimes after dying.</li>
-                <li>Fixed a bug where homing rockets would sometimes not find a target or even attempt to home.</li>
-                <li>Various hangar tweaks.</li>
-                <!--<li>Fixed a bug where the background lightning for the dragon boss would show up in the upgrade menu before the boss spawned.</li>
-                <li>Fixed several bugs with Vampiric Rounds blessing.</li>
-                <li>Fixed some issues with the upgrade menu, should be much cleaner now.</li>
+                <li>Fixed a bug where continuous damage sources like pentagon's laser move would cause the player to fully die immediately after Comeback Protocol procced.</li>
+                <li>Fixed a bug where Comeback Protocol could be used to get outside of the circle's quadrants during that phase.</li>
+                <li>Fixed a bug where taking damage immediately after lancing or at the same time as a lance being executed would cause the player's ship to become dark for the rest of the run.</li>
+                <li>Fixed a bug where you could refund points in such a way that you could keep skills in higher trees without having to have the required costs in previous trees.</li>
+                <li>Fixed a bug where the blue triangle shooter enemy would get incredibly twitchy the longer the game went on.</li>
+                <li>Fixed a bug where the system integrity bar would still show up during the rhombus boss fight, stacking on top of its health bar.</li>
+                <li>Fixed a bug where the dragon bosses music would start before the actual boss fight, due to the way that we changed boss spawning.</li>
+                <li>Fixed a bug where the celestial twins bosses music would start before the actual boss fight, due to the way that we changed boss spawning.</li>
+                <li>Fixed a bug where the player could get three choices from Critical Mass by rerolling after picking one.</li>
+                <li>Fixed a bug where boosting in to the cosmic titan's portal would cause you to be permanently boosting without using boost for the rest of the game.</li>
+                <!--<li>Fixed some issues with the upgrade menu, should be much cleaner now.</li>
                 <li>Fixed a bug where the Recursive Payload upgrade did not sync with the bombard and trident protocol upgrades.</li>
                 <li>Fixed two tiny bugs for controller navigation in the hangar panel.</li>
                 <li>Fixed a bug where a challenge and an event can happen at the same time, causing notifications to stack and other unintended results.</li>
